@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: #252525;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  background: linear-gradient(to right, #fdc830, #f37335);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+ .pizza {
+  width: min(90%, 500px);
+  margin-top: 50px;
+}
+
+.pizza img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    }
+h2 {
+    color: #fdc830;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+input {
+    width: 10%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #fdc830;
+    padding: 5px;
+    font-size: 16px;
+    color: #252525;
+    margin: 5px;
+    text-align: center;
+}
+#button{
+    width: 15%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #fdc830;
+    padding: 5px;
+    font-size: 16px;
+    color: #252525;
+    margin: 5px;
+    text-align: center;
+    background-color: #fdc830;
+    text-align: center;
+    font-weight: 700;
+}
+ol li{
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    margin-left: 50px;
+    list-style-type: decimal;
+    color:#fdc830;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+.main-container{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(min 200px, 1fr);
+
+}
+.pizza-container{
+    width: 300px;
+    height: 450px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #fdc830;
+    }
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 30px 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#pizza-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: min(90%, 500px);
+    
+}
