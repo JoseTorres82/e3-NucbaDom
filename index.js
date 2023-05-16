@@ -81,12 +81,16 @@ button.addEventListener('click', (e) => {
   e.preventDefault();
   
   const buscador = document.getElementById('buscador');
+  const contendorPizzas = document.getElementById('pizza-container');
+  contendorPizzas.innerHTML = '';
   const buscado = pizzas.find((pizza) => pizza.id == buscador.value);
   if (buscador.value > pizzas.length) {
-    alert('La opción ingresada no es válida');
+    const h2 = document.createElement('h2');
+      h2.innerText = "Selección no válida";
+      contendorPizzas.appendChild(h2);
     } else {
-      const contendorPizzas = document.getElementById('pizza-container');
-      contendorPizzas.innerHTML = '';
+      /* const contendorPizzas = document.getElementById('pizza-container');
+      contendorPizzas.innerHTML = ''; */
       const h2 = document.createElement('h2');
       h2.innerText = `${buscado.nombre}`;
       contendorPizzas.appendChild(h2);
