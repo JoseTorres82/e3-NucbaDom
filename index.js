@@ -59,7 +59,7 @@ for (let i = 0; i < pizzas.length; i++) {
   const pizza = pizzas[i];
   const li = document.createElement('li');
   const nombres = pizzas.map((pizza) => pizza.nombre);
-  const contenido = document.createTextNode(`${pizza.nombre}`);
+  const contenido = document.createTextNode(` ${+ (i+1)}  - ${pizza.nombre}.`);
   li.appendChild(contenido);
   listaOrdenada.appendChild(li);
 }
