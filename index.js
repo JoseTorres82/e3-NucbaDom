@@ -89,10 +89,24 @@ button.addEventListener('click', (e) => {
   const contendorPizzas = document.getElementById('pizza-container');
   contendorPizzas.innerHTML = '';
   const buscado = pizzas.find((pizza) => pizza.id == buscador.value);
+  if (buscador.value == 0) {
+    const h2 = document.createElement('h2');
+    h2.innerText = "Seleccina una opción";
+    contendorPizzas.appendChild(h2);
+    const img = document.createElement('img')
+    img.src = './img/pizzaNull.png';
+    contendorPizzas.appendChild(img);  
+    }
   if (buscador.value > pizzas.length) {
     const h2 = document.createElement('h2');
     h2.innerText = "Selección no válida";
     contendorPizzas.appendChild(h2);
+    const img = document.createElement('img')
+    img.src = './img/pizzaNull.png';
+    contendorPizzas.appendChild(img); 
+    const p = document.createElement('p');
+    p.innerText = `Vuelve a intentar`;
+    contendorPizzas.appendChild(p); 
   }
   else {
     const h2 = document.createElement('h2');
@@ -109,6 +123,9 @@ button.addEventListener('click', (e) => {
     contendorPizzas.appendChild(ingredientes);
   }
 });
+
+
+
 
 
 
