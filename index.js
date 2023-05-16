@@ -34,7 +34,12 @@ const pizzas = [
     id: 4,
     nombre: "Pizza Especial",
     precio: 1000,
-    ingredientes: ["Muzzarella", "Tomate", "Rucula", "Jamón"],
+    ingredientes: [
+      "Muzzarella",
+      "Tomate",
+      "Rucula",
+      "Jamón"
+    ],
     imagen: "./img/especial.png",
   },
 
@@ -50,10 +55,10 @@ const pizzas = [
 //lista Menu Opciones.
 
 const listaOrdenada = document.querySelector('ol');
-for( let i= 0; i < pizzas.length; i++ ){
+for (let i = 0; i < pizzas.length; i++) {
   const pizza = pizzas[i];
   const li = document.createElement('li');
-  const nombres = pizzas.map( (pizza) => pizza.nombre );
+  const nombres = pizzas.map((pizza) => pizza.nombre);
   const contenido = document.createTextNode(`${pizza.nombre}`);
   li.appendChild(contenido);
   listaOrdenada.appendChild(li);
@@ -79,30 +84,32 @@ buttonB.appendChild(button);
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
-  
+
   const buscador = document.getElementById('buscador');
   const contendorPizzas = document.getElementById('pizza-container');
   contendorPizzas.innerHTML = '';
   const buscado = pizzas.find((pizza) => pizza.id == buscador.value);
   if (buscador.value > pizzas.length) {
     const h2 = document.createElement('h2');
-      h2.innerText = "Selección no válida";
-      contendorPizzas.appendChild(h2);
-    } else {
-      /* const contendorPizzas = document.getElementById('pizza-container');
-      contendorPizzas.innerHTML = ''; */
-      const h2 = document.createElement('h2');
-      h2.innerText = `${buscado.nombre}`;
-      contendorPizzas.appendChild(h2);
-      const p = document.createElement('p');
-      p.innerText = `Precio: $ ${buscado.precio}`;
-      contendorPizzas.appendChild(p);
-      const img = document.createElement('img');
-      img.src = buscado.imagen;
-      contendorPizzas.appendChild(img);
-      const ingredientes = document.createElement('p');
-      ingredientes.innerText = `Ingredientes: ${buscado.ingredientes}`;
-      contendorPizzas.appendChild(ingredientes);
-      
-      }
-      });
+    h2.innerText = "Selección no válida";
+    contendorPizzas.appendChild(h2);
+  }
+  else {
+    const h2 = document.createElement('h2');
+    h2.innerText = `${buscado.nombre}`;
+    contendorPizzas.appendChild(h2);
+    const p = document.createElement('p');
+    p.innerText = `Precio: $ ${buscado.precio}`;
+    contendorPizzas.appendChild(p);
+    const img = document.createElement('img');
+    img.src = buscado.imagen;
+    contendorPizzas.appendChild(img);
+    const ingredientes = document.createElement('p');
+    ingredientes.innerText = `Ingredientes: ${buscado.ingredientes}`;
+    contendorPizzas.appendChild(ingredientes);
+  }
+});
+
+
+
+
