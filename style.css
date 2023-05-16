@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
+input[type=number] { -moz-appearance:textfield; }
 * {
   margin: 0;
   padding: 0;
@@ -123,11 +129,11 @@ ol li{
     align-items: center; 
 }
 #pizza-container{
-    width: 250px;
+    width: 300px;
     height: 300;
     background-color:#f3f0ee;
     color:  #252525;
-    border-radius: 5px 5px 5px 35px;
+    border-radius: 0px 0px 10px 10px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -139,10 +145,13 @@ ol li{
 #pizza-container img{
     width: 250px;
     height: 200px;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 15px;
     margin: 0 auto;
     padding: 0;
     
+}
+#pizza-container h2{
+    color: #252525;
 }
 footer {
   text-align: center;

@@ -85,27 +85,20 @@ button.addEventListener('click', (e) => {
   if (buscador.value > pizzas.length) {
     alert('La opción ingresada no es válida');
     } else {
-      const contenedorCard = document.createElement('div');
-      contenedorCard.classList.add('pizza-container');
-      const card = document.createElement('div');
-      card.classList.add('pizza-card');
+      const contendorPizzas = document.getElementById('pizza-container');
+      contendorPizzas.innerHTML = '';
       const h2 = document.createElement('h2');
       h2.innerText = `${buscado.nombre}`;
-      tituloBuscador.appendChild(h2);
+      contendorPizzas.appendChild(h2);
       const p = document.createElement('p');
-      p.innerText = `Precio: ${buscado.precio}`;
-      tituloBuscador.appendChild(p);
+      p.innerText = `Precio: $ ${buscado.precio}`;
+      contendorPizzas.appendChild(p);
       const img = document.createElement('img');
       img.src = buscado.imagen;
-      tituloBuscador.appendChild(img);
+      contendorPizzas.appendChild(img);
       const ingredientes = document.createElement('p');
       ingredientes.innerText = `Ingredientes: ${buscado.ingredientes}`;
-      tituloBuscador.appendChild(ingredientes);
+      contendorPizzas.appendChild(ingredientes);
       
       }
       });
-//renderizar resultado en una card
-
-
-
-
