@@ -179,9 +179,8 @@ footer {
         width: 100%;
     }
     header h1 {
-        width: 90%;
-        margin: 0;
-        padding: 0;
+        width: 100%;
+        margin: 0 auto;
         text-align: center;
     }
 
@@ -194,6 +193,8 @@ footer {
             margin: 0 auto;
             margin-left: 10px ;
             display: block;
+            letter-spacing: 2px;
+            margin: 10px;
         }
     form {
         margin: 0 auto;
@@ -219,13 +220,19 @@ footer {
         text-align: center;
         padding: 0;   
     }
-
+    #buscar-pizza input {
+        margin: 0 auto;
+        width: 40%;
+        height: 35px;
+        margin: 15px;
+    }
     #button {
             margin: 0 auto;
             width: 95%;
             height: 50px;
             font-size: 20px;
         } 
+
     }
 @media(max-width:320px){
     body{
