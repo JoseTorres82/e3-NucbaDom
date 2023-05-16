@@ -1,58 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
-  background: #252525;
-  font-family: "Poppins";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
+    background: #252525;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 h1 {
-  margin-top: 2rem;
-  font-size: 2rem;
-  background: linear-gradient(to right, #fdc830, #f37335);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  flex-wrap: wrap;
+    margin-top: 2rem;
+    font-size: 2rem;
+    background: linear-gradient(to right, #fdc830, #f37335);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 h2 {
-  color: white;
-  text-align: center;
-  font-weight: 500;
+    color: white;
+    text-align: center;
+    font-weight: 500;
 }
 
 .logo {
-  margin-bottom: 10px;
-  height: 30px;
+    margin-bottom: 10px;
+    height: 30px;
 }
 
- .pizza {
-  width: min(90%, 500px);
-  margin-top: 50px;
+.pizza {
+    width: min(90%, 500px);
+    margin-top: 50px;
 }
 
 .pizza img {
@@ -60,7 +61,8 @@ h2 {
     height: 300px;
     border-radius: 5px;
     margin-bottom: 10px;
-    }
+}
+
 h2 {
     color: #fdc830;
 }
@@ -74,6 +76,7 @@ form {
     align-items: center;
     padding: 20px;
 }
+
 input {
     width: 10%;
     height: 30px;
@@ -85,7 +88,8 @@ input {
     margin: 5px;
     text-align: center;
 }
-#button{
+
+#button {
     width: 15%;
     height: 30px;
     border-radius: 5px;
@@ -99,39 +103,43 @@ input {
     text-align: center;
     font-weight: 700;
 }
-ol li{
+
+ol li {
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
     margin-left: 50px;
-    color:#fdc830;
+    color: #fdc830;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.5;
 }
-.main-container{
+
+.main-container {
     width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(min 200px, 1fr);
 
 }
- 
-.main-container{
+
+.main-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
     margin: 0 auto;
-    width: 100%;/* min(100%, 500px); */
+    width: 100%;
+    /* min(100%, 500px); */
     margin-top: 20px;
-    margin-bottom: 20px;  
-    align-items: center; 
+    margin-bottom: 20px;
+    align-items: center;
 }
-#pizza-container{
+
+#pizza-container {
     width: 300px;
     height: 300;
-    background-color:#f3f0ee;
-    color:  #252525;
+    background-color: #f3f0ee;
+    color: #252525;
     border-radius: 0px 0px 10px 55px;
     margin: 0 auto;
     margin-top: 20px;
@@ -141,21 +149,24 @@ ol li{
     box-shadow: 0px 0px 5px #fdc830;
     letter-spacing: 1px;
     line-height: 1.2;
-    } 
-#pizza-container img{
+}
+
+#pizza-container img {
     width: 280px;
     height: 200px;
     border-radius: 0px 0px 10px 55px;
     margin: 0 auto;
     padding: 2px;
-    
+
 }
-#pizza-container h2{
+
+#pizza-container h2 {
     background-color: #fdc830;
     color: #252525;
     margin: 5px;
 }
-#pizza-container p{
+
+#pizza-container p {
     color: #252525;
     margin: 5px;
     line-height: 1.5;
@@ -163,39 +174,44 @@ ol li{
     padding: 5px;
     text-align: center;
     font-size: 15px;
-    
-    }
-footer {
-  text-align: center;
-  color: white;
-  padding: 30px 0px;
-  /* position: absolute; */
-  bottom: 0;
-  width: 100%;
+
 }
-@media(max-width:992px){
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 30px 0px;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+}
+
+@media(max-width:992px) {
     header {
         margin: 0 auto;
         width: 100%;
     }
+
     header h1 {
         width: 100%;
         margin: 0 auto;
         text-align: center;
     }
 
-    .main-container{
+    .main-container {
         margin: 0 auto;
         display: block;
-        }
-        .main-container ol li{
-            max-width: 300px;
-            margin: 0 auto;
-            margin-left: 10px ;
-            display: block;
-            letter-spacing: 2px;
-            margin: 10px;
-        }
+    }
+
+    .main-container ol li {
+        max-width: 300px;
+        margin: 0 auto;
+        margin-left: 10px;
+        display: block;
+        letter-spacing: 2px;
+        margin: 10px;
+    }
+
     form {
         margin: 0 auto;
         width: 100%;
@@ -204,6 +220,7 @@ footer {
         align-items: center;
 
     }
+
     #buscar-pizza {
         max-width: 300px;
         margin: 0 auto;
@@ -214,28 +231,32 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
     #buscar-pizza h2 {
         margin: 0 auto;
         width: 95%;
         text-align: center;
-        padding: 0;   
+        padding: 0;
     }
+
     #buscar-pizza input {
         margin: 0 auto;
         width: 40%;
         height: 35px;
         margin: 15px;
     }
-    #button {
-            margin: 0 auto;
-            width: 95%;
-            height: 50px;
-            font-size: 20px;
-        } 
 
+    #button {
+        margin: 0 auto;
+        width: 95%;
+        height: 50px;
+        font-size: 20px;
     }
-@media(max-width:320px){
-    body{
+
+}
+
+@media(max-width:320px) {
+    body {
         max-width: 315px;
         margin: 0 auto;
         display: block;

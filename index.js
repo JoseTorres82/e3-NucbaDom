@@ -91,7 +91,7 @@ button.addEventListener('click', (e) => {
   const buscado = pizzas.find((pizza) => pizza.id == buscador.value);
   if (buscador.value == 0) {
     const h2 = document.createElement('h2');
-    h2.innerText = "Seleccina una opción";
+    h2.innerText = "Selecciona una opción";
     contendorPizzas.appendChild(h2);
     const img = document.createElement('img')
     img.src = './img/pizzaNull.png';
