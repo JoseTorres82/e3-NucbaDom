@@ -52,8 +52,6 @@ const pizzas = [
   },
 ];
 
-//lista Menu Opciones.
-
 const listaOrdenada = document.querySelector('ol');
 for (let i = 0; i < pizzas.length; i++) {
   const pizza = pizzas[i];
@@ -79,7 +77,7 @@ const buttonB = document.querySelector('form');
 const button = document.createElement('button');
 button.type = "submit";
 button.id = "button";
-button.innerText = "Buscar";
+button.innerText = "Ver más";
 buttonB.appendChild(button);
 
 button.addEventListener('click', (e) => {
@@ -122,11 +120,6 @@ button.addEventListener('click', (e) => {
     ingredientes.innerText = `Ingredientes: ${buscado.ingredientes}`;
     contendorPizzas.appendChild(ingredientes);
   }
-});
-
-
-
-
-
-
-
+  buscador.value = "";
+  buscador.focus();
+  });
