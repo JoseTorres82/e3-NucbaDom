@@ -56,8 +56,7 @@ const listaOrdenada = document.querySelector('ol');
 for (let i = 0; i < pizzas.length; i++) {
   const pizza = pizzas[i];
   const li = document.createElement('li');
-  const nombres = pizzas.map((pizza) => pizza.nombre);
-  const contenido = document.createTextNode(` ${+ (i+1)}  - ${pizza.nombre}.`);
+  const contenido = document.createTextNode(` ${+ (i + 1)}  - ${pizza.nombre}.`);
   li.appendChild(contenido);
   listaOrdenada.appendChild(li);
 }
@@ -71,6 +70,7 @@ const inputB = document.querySelector('form');
 const buscador = document.createElement('input');
 buscador.type = "number";
 buscador.id = "buscador";
+buscador.placeholder = "Op. Nº";
 inputB.appendChild(buscador);
 
 const buttonB = document.querySelector('form');
@@ -84,42 +84,77 @@ button.addEventListener('click', (e) => {
   e.preventDefault();
 
   const buscador = document.getElementById('buscador');
-  const contendorPizzas = document.getElementById('pizza-container');
-  contendorPizzas.innerHTML = '';
+  const pedidos = document.getElementById('pedido-container');
+  pedidos.innerHTML = '';
+  const contenedorPizzas = document.getElementById('pizza-container');
+  contenedorPizzas.innerHTML = '';
+
+  pizzaStorege = []
+  const saveOnLocalStorage = () => {
+    localStorage.setItem("pizzasPedido", pizzaStorege);
+  }
+
   const buscado = pizzas.find((pizza) => pizza.id == buscador.value);
   if (buscador.value == 0) {
     const h2 = document.createElement('h2');
     h2.innerText = "Selecciona una opción";
-    contendorPizzas.appendChild(h2);
+    contenedorPizzas.appendChild(h2);
     const img = document.createElement('img')
     img.src = './img/pizzaNull.png';
-    contendorPizzas.appendChild(img);  
-    }
+    contenedorPizzas.appendChild(img);
+  }
   if (buscador.value > pizzas.length) {
     const h2 = document.createElement('h2');
     h2.innerText = "Selección no válida";
-    contendorPizzas.appendChild(h2);
+    contenedorPizzas.appendChild(h2);
     const img = document.createElement('img')
     img.src = './img/pizzaNull.png';
-    contendorPizzas.appendChild(img); 
+    contenedorPizzas.appendChild(img);
     const p = document.createElement('p');
     p.innerText = `Vuelve a intentar`;
-    contendorPizzas.appendChild(p); 
+    contenedorPizzas.appendChild(p);
   }
   else {
     const h2 = document.createElement('h2');
     h2.innerText = `${buscado.nombre}`;
-    contendorPizzas.appendChild(h2);
+    contenedorPizzas.appendChild(h2);
     const p = document.createElement('p');
     p.innerText = `Precio: $ ${buscado.precio}`;
-    contendorPizzas.appendChild(p);
+    contenedorPizzas.appendChild(p);
     const img = document.createElement('img');
     img.src = buscado.imagen;
-    contendorPizzas.appendChild(img);
+    contenedorPizzas.appendChild(img);
     const ingredientes = document.createElement('p');
     ingredientes.innerText = `Ingredientes: ${buscado.ingredientes}`;
-    contendorPizzas.appendChild(ingredientes);
+    contenedorPizzas.appendChild(ingredientes);
+    const h3 = document.createElement('h3');
+    h3.innerText = `Su Pedido`;
+    pedidos.appendChild(h3);
+    const hr = document.createElement('hr');
+    pedidos.appendChild(hr);
+    const h4 = document.createElement('h4');
+    h4.innerText = `${buscado.nombre}` + " $" +`${buscado.precio}`;
+    pedidos.appendChild(h4);
+    const a = document.createElement('a');
+    a.innerText = "Hacer Pedido";
+    a.href = "#"; 
+    pedidos.appendChild(a);
+    if (buscado.value !== pizzaStorege.length) {
+      let i = 0 ; i++; pizzaStorege[i];
+      const pizza = {
+        id: buscado.id,
+        nombre: buscado.nombre,
+        precio: buscado.precio,
+        }
+        pizzaStorege.push(pizza);
+        
+        localStorage.setItem('pizzas', JSON.stringify(pizzaStorege));
+        saveOnLocalStorage();
+      }
   }
+  
+
+
   buscador.value = "";
   buscador.focus();
-  });
+});
